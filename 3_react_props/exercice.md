@@ -1,7 +1,15 @@
 # Practice React Props
 
-
 ## Exercice 1 :
+
+Compose your page with components Header/ Body / Footer 
+
+* Header have site title
+* Body contains components
+* Footer have legal notes
+
+
+## Exercice 2 :
 
 Create a component to display Character infos
 

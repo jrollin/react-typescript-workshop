@@ -79,29 +79,42 @@ const Message: React.FC<{ message: string }> = ({ message }) => (
 ### Title component With Children
 
 ```javascript
-const Title: React.FunctionComponent<{ title: string }> = ({
+const Title: React.FC<{ title: string }> = ({
   children,
   title,
 }) => <div title={title}>{children}</div>;
 
 ```
 
-## Children
-
-
 ## Conditional rendering
 
+```javascript
+const Mailbox: React.FC<{unreadMessages: Message[]> = ({unreadMessages}) => {
+  return (
+    <div>
+      <h1>Hello!</h1>
+      {unreadMessages.length > 0 &&
+        <h2>
+          You have {unreadMessages.length} unread messages.
+        </h2>
+      }
+    </div>
+  );
+}
 
+```
 
 ## Events
 
 ```javascript
-onClick(event: React.MouseEvent<HTMLButtonElement>): void;
+onClick(event: React.MouseEvent<HTMLButtonElement>): void => {
+  //code
+}
 ```
 
 ```javascript
 onChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
-this.setState({text: e.currentTarget.value})
+  //code
 }
 ```
 
@@ -112,20 +125,28 @@ this.setState({text: e.currentTarget.value})
 
 ```bash
 yarn add bulma
+```
+
+```javascript
+import 'bulma/css/bulma.css'
+```
+
+if you need to customize
+
+```javascript
 // not yet compatible with 5, 
 yarn add node-sass@4  
 ```
 
-## react testing lib
-
 
 ## Storybook
 
-
-```bash
-// storybook with ts
-npx sb@next init --story-format=csf-ts
+```
+npx sb init
 ```
 
-// npx sb init not working for me...
+or 
+
+```bash
 npx -p @storybook/cli@next sb init
+```

@@ -77,6 +77,29 @@ module.exports = {
 ```
 
 
+## Vscode debug 
+
+Then add the block below to your launch.json file and put it inside the .vscode folder in your app’s root directory.
+
+```javascript
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Chrome",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/src",
+      "sourceMapPathOverrides": {
+        "webpack:///src/*": "${webRoot}/*"
+      }
+    }
+  ]
+}
+
+```
+
 ## JSX
 
 * no required !
