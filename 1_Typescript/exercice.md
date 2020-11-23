@@ -5,18 +5,15 @@ Some exercices to summup some Typescript syntax
 
 ## Exercice 1
 
-1) Create interface / type for an article
+Create interface / type for an article
 
+* id: number
 * title: string
 * rating: number
 * publishedAt: date
 * author : string
 * isParent : boolean
-
-2) Add an author to article with a new interface
-
-* name
-* avatarUrl
+* imageUrl : string (optional)
 
 ## Exercice 2 
 

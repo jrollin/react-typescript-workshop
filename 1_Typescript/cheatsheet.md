@@ -244,7 +244,8 @@ declare global {
 
 ### import non ts file
 
-ex: image ".png"
+
+#### image ".png"
 
 ```javascript
 // declaration.d.ts
@@ -256,3 +257,25 @@ declare module "*.png";
 // importing in a tsx file
 import * as logo from "./logo.png";
 ```
+
+
+#### Json import 
+
+supported since TS 2.9+
+
+```javascript
+//ensure tsconfig.json have following keys
+{
+  "compilerOptions": {
+      "resolveJsonModule": true,
+      "esModuleInterop": true  
+  }
+}
+```
+
+```javascript
+// importing in a tsx file
+import * as news from "./file.json";
+```
+
+
