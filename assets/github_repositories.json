@@ -1,4 +1,4 @@
-export const repositories = [
+[
     {
       "id": 1,
       "node_id": "MDEwOlJlcG9zaXRvcnkx",

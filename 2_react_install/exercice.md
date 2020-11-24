@@ -18,7 +18,7 @@ Example
 <Welcome message="world" /> => "Hello world !"
 ```
 
-> you could use mutliple components
+> you could use multiple components
 
 
 

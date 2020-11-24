@@ -44,6 +44,56 @@ setArticle(newArticle);
 
 ```
 
+### UseEffect
+
+
+```javascript
+const App = () => {
+  const [isOn, setIsOn] = useState(false);
+  const [timer, setTimer] = useState(0);
+  useEffect(
+    () => {
+      let interval;
+      if (isOn) {
+        interval = setInterval(() => setTimer(timer => timer + 1), 1000);
+      }
+      return () => clearInterval(interval);
+    },
+    [isOn]
+  );
+  const onReset = () => {
+    setIsOn(false);
+    setTimer(0);
+  };
+  return (
+    <>
+      Timer: {timer}
+      {!isOn && (<button onClick={() => setIsOn(true)}>Start</button>)}
+      {isOn && (<button onClick={() => setIsOn(false)}>Stop</button>)}
+      <button disabled={timer === 0} onClick={onReset}>Reset</button>
+    </>
+  );
+};
+
+```
+
+Note:  Typescript screams when await.async in useEffect
+
+```javascript
+const MyFunctionnalComponent: React.FC = props => {
+  useEffect(() => {
+    // Create an scoped async function in the hook
+    async function anyNameFunction() {
+      await loadContent();
+    }    // Execute the created function directly
+    anyNameFunction();
+  }, []);
+  
+  return <div></div>;
+};
+
+
+```
 ### UseReducer
 
 
