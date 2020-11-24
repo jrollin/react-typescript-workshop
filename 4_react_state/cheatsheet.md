@@ -1,6 +1,4 @@
-props vs states
-config and Env
-UseState / useEffect
+# React State (cheatsheet)
 
 ## states vs props
 
@@ -36,8 +34,6 @@ class App extends React.Component<MyProps, MyState> {
 
 ## Hooks 
 
-
-
 ### UseState
 
 ```javascript
@@ -50,12 +46,15 @@ setArticle(newArticle);
 
 ### UseReducer
 
+
+Beware : different types for `payload` in this example
+
 ```javascript
 const initialState = { count: 0 };
 
 type ACTIONTYPE =
-  | { type: "increment"; payload: number }
-  | { type: "decrement"; payload: string };
+  | { type: "increment", payload: number }
+  | { type: "decrement", payload: string };
 
 function reducer(state: typeof initialState, action: ACTIONTYPE) {
   switch (action.type) {
@@ -83,3 +82,4 @@ function Counter() {
   );
 }
 ```
+

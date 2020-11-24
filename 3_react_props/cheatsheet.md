@@ -3,6 +3,7 @@
 * Prop Types
 * function component
 * conditional rendering
+* event
 * styling
 * storybook
 

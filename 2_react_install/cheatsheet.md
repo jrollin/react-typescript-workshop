@@ -1,8 +1,5 @@
 # React stack setup (cheatsheet)
 
-- React with Typescript
-- Prettier for common code formatting
-- ESLint for common rules and syntax check
 
 ## Create react app
 
@@ -20,6 +17,82 @@ npm start
 npm run test
 ```
 > you should have a test running
+
+
+
+
+## JSX
+
+* no required !
+* prevent XSS injection
+
+
+
+JSX component
+
+```javascript
+<MyButton color="blue" shadowSize={2}>
+  Cliquez ici
+</MyButton>
+```
+
+Related element 
+
+```javascript
+React.createElement(
+  MyButton,
+  {color: 'blue', shadowSize: 2},
+  'Cliquez ici'
+)
+```
+
+
+
+
+### Attribute Expression vs string value
+
+
+Use quotes (for string values)
+
+```javascript
+const element = <div tabIndex="0"></div>;
+```
+
+curly braces (for expressions), 
+
+```javascript
+const element = <img src={user.avatarUrl}></img>;
+```
+
+
+
+### JSX vs HTML
+
+Looks like HTML but it is not !
+
+=> used camelCase property
+
+
+* class => className
+* tabindex => tabIndex
+
+
+
+
+## Inject Env
+
+
+React is preconfigured with `dotenv` package
+
+```javascript
+//.env
+API_URL=http://localhost:8000
+```
+
+```javascript
+// in your app
+const App = () => <h1>{process.env.API_URL}</h1>;
+```
 
 
 
@@ -99,60 +172,3 @@ Then add the block below to your launch.json file and put it inside the .vscode 
 }
 
 ```
-
-## JSX
-
-* no required !
-* prevent XSS injection
-
-
-
-JSX component
-
-```javascript
-<MyButton color="blue" shadowSize={2}>
-  Cliquez ici
-</MyButton>
-```
-
-Related element 
-
-```javascript
-React.createElement(
-  MyButton,
-  {color: 'blue', shadowSize: 2},
-  'Cliquez ici'
-)
-```
-
-
-
-
-### Attribute Expression vs string value
-
-
-Use quotes (for string values)
-
-```javascript
-const element = <div tabIndex="0"></div>;
-```
-
-curly braces (for expressions), 
-
-```javascript
-const element = <img src={user.avatarUrl}></img>;
-```
-
-
-
-
-### JSX vs HTML
-
-Looks like HTML but it is not !
-
-=> used camelCase property
-
-
-* class => className
-* tabindex => tabIndex
-

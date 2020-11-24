@@ -11,17 +11,15 @@ Compose your page with components Header/ Body / Footer
 
 ## Exercice 2 :
 
-Create a component to display Character infos
+Create a component to display Avatar infos
 
 * username
 * image if provided or default
 
 
-## Exercice 2 
+## Exercice 3
 
 Add some style with Bulma CSS
-
-TODO image 
 
 > you could use any framework CSS or none, this one is good ;)
 
