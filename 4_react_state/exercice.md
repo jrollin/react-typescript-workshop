@@ -24,3 +24,6 @@ Add a search input to restrict comics to matching title
 * At least 3 char before triggering a new search
 
 
+## Exercice 3
+
+Add a page to see detail about comic 

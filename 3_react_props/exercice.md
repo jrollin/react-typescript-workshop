@@ -1,38 +1,28 @@
 # Practice React Props
 
-## Exercice 1 :
+## Exercice 1
 
-Compose your page with components Header/ Body / Footer 
+Compose your page with components Navbar/ Content / Footer 
 
-* Header have site title
-* Body contains components
+* Nav have site title
+* Content contains text
 * Footer have legal notes
 
-
-## Exercice 2 :
-
-Create a component to display Avatar infos
-
-* username
-* image if provided or default
+>[Bulma navbar](https://versions.bulma.io/0.7.0/documentation/components/navbar/)
 
 
-## Exercice 3
-
-Add some style with Bulma CSS
-
-> you could use any framework CSS or none, this one is good ;)
-
-
-### Exercice 4
+### Exercice 2
 
 List of repositories
 
 * display list of repository
-* display  a message if no data
+* display an avatar if provided
 
 > define types 
 > split in differents views
 > use a service
 
+
+> [Bulma media object](https://bulma.io/documentation/layout/media-object/)
+> [Bulma box](https://bulma.io/documentation/elements/box/)
 
