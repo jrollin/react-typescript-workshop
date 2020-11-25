@@ -33,7 +33,7 @@ use following es6 syntaxes
 ## Exercice 2
 
 
-Given the `github_repositories.js` file containing array of repositories , display a list of all repositories where owner have an avatar 
+Given the `/assets/github_repositories.json` file containing array of repositories , display a list of all repositories where owner have an avatar 
 
 Example line :
 
