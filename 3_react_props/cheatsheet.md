@@ -119,6 +119,23 @@ onChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
 }
 ```
 
+## loop need key
+
+```javascript
+{items.map(item => (
+  <li key={item.id}>
+  </li>
+))}
+
+```
+
+```javascript
+{items.map((item, index) => (
+  <li key={index}>
+  <li/>
+))}
+```
+
 ## Styling component CSS
 
 
@@ -132,7 +149,7 @@ yarn add bulma
 import 'bulma/css/bulma.css'
 ```
 
-if you need to customize
+if you need to customize, use node sass version
 
 ```javascript
 // not yet compatible with 5, 
