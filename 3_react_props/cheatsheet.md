@@ -216,3 +216,11 @@ or
 ```bash
 npx -p @storybook/cli@next sb init
 ```
+
+
+Error with babel 8.1 required by react vs 8.2 storybook
+
+```bash
+yarn add babel-loader@8.1
+```
+
